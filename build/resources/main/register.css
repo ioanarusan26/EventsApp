@@ -1,0 +1,15 @@
+.root
+{
+    -fx-background-color: #eff8e2;
+}
+
+#registerBtn
+{
+    -fx-background-color: #bbafb9;
+    -fx-cursor: hand;
+    -fx-background-radius: 0;
+    -fx-text-fill: white;
+    -fx-min-width: 100px;
+    -fx-min-height: 40px;
+    -fx-font-size: 20px;
+}
