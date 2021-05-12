@@ -3,13 +3,58 @@
     -fx-background-color: #eff8e2;
 }
 
+#title-text
+{
+    -fx-font-size: 40px;
+    -fx-font: #18020c;
+    -fx-font-family: SansSerif;
+    -fx-text-alignment: center;
+}
+
+.label
+{
+    -fx-font-size: 15px;
+    -fx-font-family: sans-serif;
+}
+
+.text-field
+{
+    -fx-border-color: #bbafb9;
+}
+
+.text-field:focused
+{
+    -fx-border-color: #634b66;
+}
+
+.choice-box
+{
+    -fx-border-color: #bbafb9;
+}
+
+.choice-box:focused
+{
+    -fx-border-color: #634b66;
+}
+
+#backBtn
+{
+    -fx-background-color: #634b66;
+    -fx-cursor: hand;
+    -fx-background-radius: 5;
+    -fx-text-fill: white;
+    -fx-min-width: 70px;
+    -fx-min-height: 35px;
+    -fx-font-size: 15px;
+}
+
 #registerBtn
 {
-    -fx-background-color: #bbafb9;
+    -fx-background-color: #634b66;
     -fx-cursor: hand;
-    -fx-background-radius: 0;
+    -fx-background-radius: 5;
     -fx-text-fill: white;
-    -fx-min-width: 100px;
-    -fx-min-height: 40px;
-    -fx-font-size: 20px;
+    -fx-min-width: 70px;
+    -fx-min-height: 35px;
+    -fx-font-size: 15px;
 }

@@ -38,8 +38,9 @@
         </ChoiceBox>
 
         <Text fx:id="registrationMessage" GridPane.columnIndex="1" GridPane.rowIndex="10"/>
-        <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="8">
-            <Button id="registerBtn" onAction="#handleRegisterAction" text="Sign up"/>
+        <HBox spacing="10" GridPane.rowIndex="8" GridPane.columnIndex="1" alignment="bottom_right">
+                <Button id="backBtn" text="Back"/>
+                <Button id="registerBtn" onAction="#handleRegisterAction" text="Sign up" />
         </HBox>
 
         <stylesheets>
