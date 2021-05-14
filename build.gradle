@@ -22,16 +22,13 @@ dependencies {
     compile 'com.fasterxml.jackson.core:jackson-databind:2.11.0.rc1'
 }
 
-application {
-    mainClassName = 'org.app.events.registration.Main'
-}
+mainClassName = 'org.app.events.landing.Main'
 
 jar{
-      manifest{
-          attributes 'Main-Class': 'org.app.events.registration.Main'
-      }
-    archivesBaseName = 'EventsApp'
+    manifest{
+        attributes 'Main-Class': 'org.app.events.landing.Main'
+    }
     from{
-        configurations.compile.collect{it.isDirectory() ? it : zipTree(it) }
+        configurations.runtime.collect{it.isDirectory() ? it : zipTree(it) }
     }
 }

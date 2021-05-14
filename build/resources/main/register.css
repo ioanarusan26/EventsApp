@@ -6,7 +6,7 @@
 #title-text
 {
     -fx-font-size: 40px;
-    -fx-font: #18020c;
+    -fx-text-fill:#18020c;
     -fx-font-family: SansSerif;
     -fx-text-alignment: center;
 }
@@ -20,7 +20,6 @@
 .text-field
 {
     -fx-border-color: #bbafb9;
-    -fx-border-radius: 0;
 }
 
 .text-field:focused
