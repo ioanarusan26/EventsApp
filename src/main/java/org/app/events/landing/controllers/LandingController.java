@@ -12,12 +12,20 @@ import java.io.IOException;
 public class LandingController
 {
     @FXML
-    Button signupBtn;
+    Button signupBtn, loginBtn;
 
     @FXML
     public void switchToRegister() throws IOException {
         Stage stage = (Stage)signupBtn.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("register.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    public void switchToLogin() throws IOException {
+        Stage stage = (Stage)loginBtn.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("login.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

@@ -1,0 +1,52 @@
+.root
+{
+    -fx-background-color: #eff8e2;
+}
+
+#title-text
+{
+    -fx-font-size: 40px;
+    -fx-text-fill:#18020c;
+    -fx-font-family: SansSerif;
+    -fx-text-alignment: right;
+}
+
+.label
+{
+    -fx-font-size: 15px;
+    -fx-font-family: sans-serif;
+}
+
+.text-field
+{
+    -fx-border-color: #bbafb9;
+}
+
+.text-field:focused
+{
+    -fx-border-color: #634b66;
+}
+
+
+
+#backBtn
+{
+    -fx-background-color: #634b66;
+    -fx-cursor: hand;
+    -fx-background-radius: 5;
+    -fx-text-fill: white;
+    -fx-min-width: 70px;
+    -fx-min-height: 35px;
+    -fx-font-size: 15px;
+}
+
+#loginBtn
+{
+    -fx-background-color: #634b66;
+    -fx-cursor: hand;
+    -fx-background-radius: 5;
+    -fx-text-fill: white;
+    -fx-min-width: 70px;
+    -fx-min-height: 35px;
+    -fx-font-size: 15px;
+}

@@ -5,8 +5,8 @@ import java.nio.file.Paths;
 
 public class FileSystemService
 {
-    private static final String APPLICATION_FOLDER = ".EventsApp";
-    private static final String USER_FOLDER = System.getProperty("user.home");
+    private static final String APPLICATION_FOLDER = "";
+    private static final String USER_FOLDER = System.getProperty("user.dir");
     public static final Path APPLICATION_HOME_PATH = Paths.get(USER_FOLDER,APPLICATION_FOLDER);
 
     public static Path getPathToFile(String... path)

@@ -13,7 +13,7 @@
     </padding>
 
     <Label text="Welcome to the Events App!" />
-    <Button id="loginBtn" text="Log In"/>
+    <Button fx:id="loginBtn" onAction="#switchToLogin" text="Log In"/>
     <Button fx:id="signupBtn" onAction="#switchToRegister" text="Sign up"/>
 
 </VBox>
