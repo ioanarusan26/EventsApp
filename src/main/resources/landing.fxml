@@ -3,6 +3,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 
+<?import java.net.URL?>
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="org.app.events.landing.controllers.LandingController"
@@ -12,8 +13,12 @@
         <Insets bottom="25" left="25" right="25" top="25"/>
     </padding>
 
-    <Label text="Welcome to the Events App!" />
+    <Label id="text-title" text="Welcome to the Events App!" />
     <Button fx:id="loginBtn" onAction="#switchToLogin" text="Log In"/>
-    <Button fx:id="signupBtn" onAction="#switchToRegister" text="Sign up"/>
+    <Button fx:id="signupBtn" onAction="#switchToRegister" text="Register"/>
+
+    <stylesheets>
+        <URL value="@landing.css"/>
+    </stylesheets>
 
 </VBox>

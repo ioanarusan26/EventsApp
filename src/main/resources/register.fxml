@@ -40,7 +40,7 @@
         <Text fx:id="registrationMessage" GridPane.columnIndex="1" GridPane.rowIndex="10"/>
         <HBox spacing="10" GridPane.rowIndex="8" GridPane.columnIndex="1" alignment="bottom_right">
                 <Button fx:id="backBtn" onAction="#changeToLanding" text="Back"/>
-                <Button id="registerBtn" onAction="#handleRegisterAction" text="Sign up" />
+                <Button id="registerBtn" onAction="#handleRegisterAction" text="Register" />
         </HBox>
 
         <stylesheets>

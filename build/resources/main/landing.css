@@ -1,0 +1,24 @@
+.root
+{
+    -fx-background-color: #eff8e2;
+}
+
+#text-title
+{
+    -fx-font-size: 40px;
+    -fx-text-fill: #18020c;
+    -fx-font-family: SansSerif;
+    -fx-text-alignment: center;
+}
+
+.button
+{
+    -fx-background-color: #634b66;
+    -fx-cursor: hand;
+    -fx-background-radius: 5;
+    -fx-text-fill: white;
+    -fx-min-width: 150px;
+    -fx-min-height: 45px;
+    -fx-font-size: 20px;
+}
+
