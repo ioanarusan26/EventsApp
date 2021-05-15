@@ -37,22 +37,38 @@ public class UserService
         });
     }
 
-    public static void logInUser(String username, String password, String logInMessage) throws UserDontExistsException, PasswordIsWrongException {
+    public static int logInUser(String username, String password) throws UserDontExistsException, PasswordIsWrongException {
 //        System.out.println("LOGIN");
+
        if(searchForUser(username))
        {
            if(checkPassword(username, password))
            {
-               System.out.println("M-am logat!");
+               return getUserRole(username);
            }
            else throw  new PasswordIsWrongException();
        }
        else throw new UserDontExistsException(username);
-
     }
+    public static int getUserRole(String username) throws UserDontExistsException {
+        for(User user : users)
+        {
+            if (searchForUser(username)) {
+                if (Objects.equals(user.getRole(), "Participant")) return 10;
+                else if (Objects.equals(user.getRole(), "Volunteer")) return 20;
+            }
+        }
+        return 0;
+    }
+
     public static boolean searchForUser(String username) throws UserDontExistsException {
+
         for (User user : users) {
-            return Objects.equals(username, user.getUsername());
+//            return Objects.equals(username, user.getUsername());
+            if(Objects.equals(username, user.getUsername()))
+            {
+                return  true;
+            }
         }
         throw new UserDontExistsException(username);
 

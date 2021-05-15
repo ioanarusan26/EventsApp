@@ -24,10 +24,10 @@
     <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
     <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
 
-    <Text fx:id="logInMessage" GridPane.columnIndex="1" GridPane.rowIndex="10"/>
+<!--    <Text fx:id="logInMessage" GridPane.columnIndex="1" GridPane.rowIndex="10"/>-->
     <HBox spacing="10" GridPane.rowIndex="8" GridPane.columnIndex="1" alignment="bottom_right">
         <Button fx:id="backBtn" onAction="#changeToLanding" text="Back"/>
-        <Button fx:id="loginBtn" onAction="#handleLogInAction" text="Log In" />
+        <Button fx:id="loginBtn1" onAction="#handleLogInAction" text="Log In" />
     </HBox>
 
     <stylesheets>
