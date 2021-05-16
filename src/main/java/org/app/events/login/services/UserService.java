@@ -54,8 +54,8 @@ public class UserService
         for(User user : users)
         {
             if (searchForUser(username)) {
-                if (Objects.equals(user.getRole(), "Participant")) return 10;
-                else if (Objects.equals(user.getRole(), "Volunteer")) return 20;
+                if ((user.getRole()).equals("Participant")) return 10;
+                else if ((user.getRole()).equals("Volunteer")) return 20;
             }
         }
         return 0;
@@ -64,8 +64,7 @@ public class UserService
     public static boolean searchForUser(String username) throws UserDontExistsException {
 
         for (User user : users) {
-//            return Objects.equals(username, user.getUsername());
-            if(Objects.equals(username, user.getUsername()))
+            if(username.equals(user.getUsername()))
             {
                 return  true;
             }

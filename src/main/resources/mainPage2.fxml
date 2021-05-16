@@ -3,7 +3,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 
-<?import javafx.scene.text.Text?>
+<?import java.net.URL?>
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="org.app.events.mainPage.controllers.MainPageController"
@@ -13,6 +13,11 @@
         <Insets bottom="25" left="25" right="25" top="25"/>
     </padding>
 
-<Label>MAIN PAGE FOR VOLUNTEER</Label>
-    <Text id="LogInMessage" GridPane.columnIndex="1" GridPane.rowIndex="10"/>
+    <Label>VOLUNTEER DASHBOARD</Label>
+    <Button id="volunteerToAllEventsBtn"  text="All Events"/>
+    <Button id="volunteerToItsEventsBtn"  text="My Events"/>
+    <Button fx:id="LogOutBtn" onAction="#changeToLanding" text="Log Out"/>
+    <stylesheets>
+        <URL value="@mainPage.css"/>
+    </stylesheets>
 </VBox>
