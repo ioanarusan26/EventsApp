@@ -62,7 +62,7 @@ public class RegistrationController {
     public void changeToLanding() throws IOException
     {
         Stage stage = (Stage)backBtn.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("landing.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("./landing/landing.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

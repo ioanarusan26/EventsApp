@@ -6,19 +6,17 @@
 <?import java.net.URL?>
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.app.events.mainPage.controllers.MainPageController"
+      fx:controller="org.app.events.lists.controllers.AdminToAllEvents"
       prefHeight="400.0" prefWidth="600.0" alignment="center" spacing="10">
 
     <padding>
         <Insets bottom="25" left="25" right="25" top="25"/>
     </padding>
 
-<Label>ADMIN DASHBOARD</Label>
-    <Button id="adminToAllVolunteersBtn"  text="All Volunteers"/>
-    <Button id="adminToAllEventsBtn"  text="All Events"/>
-    <Button id="AddEventBtn"  text="Add Event"/>
-    <Button fx:id="LogOutBtn" onAction="#changeToLanding" text="Log Out"/>
+    <Label id="text-title">ALL EVENTS LIST</Label>
+    <Button fx:id="BackBtn" onAction="#changeToMainPage" text="Back"/>
+
     <stylesheets>
-        <URL value="@mainPage.css"/>
+        <URL value="@eventsLists.css"/>
     </stylesheets>
 </VBox>

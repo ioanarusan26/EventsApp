@@ -37,14 +37,14 @@ public class LoginController {
         Parent root;
         if(role==1) //participant
         {
-            root = FXMLLoader.load(getClass().getClassLoader().getResource("mainPage1.fxml"));
+            root = FXMLLoader.load(getClass().getClassLoader().getResource("./mainPage/mainPage1.fxml"));
         }
         else if(role==2) //voluntar
         {
-            root = FXMLLoader.load(getClass().getClassLoader().getResource("mainPage2.fxml"));
+            root = FXMLLoader.load(getClass().getClassLoader().getResource("./mainPage/mainPage2.fxml"));
         }
 //        admin
-        else root = FXMLLoader.load(getClass().getClassLoader().getResource("mainPage.fxml"));
+        else root = FXMLLoader.load(getClass().getClassLoader().getResource("./mainPage/mainPage.fxml"));
 //        root = FXMLLoader.load(getClass().getClassLoader().getResource("mainPage.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
@@ -56,7 +56,7 @@ public class LoginController {
     public void changeToLanding() throws IOException
     {
         Stage stage = (Stage)backBtn.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("landing.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("./landing/landing.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
