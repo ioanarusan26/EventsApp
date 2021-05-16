@@ -1,1 +1,22 @@
-[]
+[ {
+  "username" : "admin",
+  "firstname" : "",
+  "lastname" : "",
+  "email" : "",
+  "password" : "ǭD˭v*]��R��T����*8\u0001_#���\u000B�\u001D�rcM��\u001C�N�5�j�����\u001F�Q\u0013��S�Ɲ�ސw�",
+  "role" : "admin"
+}, {
+  "username" : "participant",
+  "firstname" : "",
+  "lastname" : "",
+  "email" : "",
+  "password" : "\r�&�\u0005�\u001D��M�lc��v-�i/�M\u000E�\u0004�n�-\rB3�\\���F�VG\f�?%��T��R;��:;F13\\�U",
+  "role" : "Participant"
+}, {
+  "username" : "voluntar",
+  "firstname" : "",
+  "lastname" : "",
+  "email" : "",
+  "password" : "��D��� ҈jz��p\u0007��ߴj�w�T\u0012��\u0007�z�\u0018?\u0019k,�HT�I��\u0000��ʰ�V4]�b]���IX��",
+  "role" : "Volunteer"
+} ]
