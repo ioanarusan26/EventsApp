@@ -16,8 +16,9 @@
     <Label id="text-title" text="ADMIN DASHBOARD" />
     <Button fx:id="adminToAllVolunteersBtn"  onAction="#changeToAdminToAllVolunteers" text="All Volunteers"/>
     <Button fx:id="adminToAllEventsBtn"  onAction="#changeToAdminToAllEvents" text="All Events"/>
-    <Button id="AddEventBtn"  text="Add Event"/>
+    <Button fx:id="addEventBtn" onAction="#changeToAddEvent" text="Add Event"/>
     <Button fx:id="LogOutBtn" onAction="#changeToLanding" text="Log Out"/>
+
     <stylesheets>
         <URL value="@mainPage.css"/>
     </stylesheets>

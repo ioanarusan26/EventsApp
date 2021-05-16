@@ -9,7 +9,7 @@
 <GridPane xmlns="http://javafx.com/javafx"
           xmlns:fx="http://javafx.com/fxml"
           fx:controller="org.app.events.event.controllers.AddEventController"
-          prefHeight="400.0" prefWidth="600.0" alignment="center" vgap="5">
+          prefHeight="400.0" prefWidth="600.0" alignment="center" vgap="7" hgap="5">
 
     <padding>
         <Insets bottom="25" left="25" right="25" top="25"/>
@@ -23,13 +23,14 @@
     <Label text="Date:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
     <DatePicker fx:id="date" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
 
-    <Label text="Description:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
-    <TextField fx:id="description" GridPane.columnIndex="0"  GridPane.columnSpan="2" GridPane.rowIndex="4" />
-
-    <Text fx:id="addMessage" GridPane.columnIndex="1" GridPane.rowIndex="10"/>
-    <HBox spacing="10" GridPane.rowIndex="8" GridPane.columnIndex="1" alignment="bottom_right">
-        <Button fx:id="backBtn" text="Back"/>
-        <Button id="registerBtn" onAction="#handleAddEventAction" text="Add" />
+    <VBox spacing="5" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="3">
+        <Label text="Description:" />
+        <TextArea fx:id="description" prefWidth="350" wrapText="true"/>
+    </VBox>
+    <Text fx:id="addMessage" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+    <HBox spacing="10" GridPane.rowIndex="4" GridPane.columnIndex="1" alignment="bottom_right">
+        <Button fx:id="backBtn" onAction="#changeToMainPage" text="Back"/>
+        <Button id="addEventBtn" onAction="#handleAddEventAction" text="Add" />
     </HBox>
 
     <stylesheets>
