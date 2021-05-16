@@ -17,7 +17,7 @@ public class LandingController
     @FXML
     public void switchToRegister() throws IOException {
         Stage stage = (Stage)signupBtn.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("register.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("./register/register.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -25,7 +25,7 @@ public class LandingController
     @FXML
     public void switchToLogin() throws IOException {
         Stage stage = (Stage)loginBtn.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("./login/login.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

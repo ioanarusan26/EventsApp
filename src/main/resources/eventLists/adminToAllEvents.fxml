@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<?import java.net.URL?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.app.events.lists.controllers.AdminToAllEvents"
+      prefHeight="400.0" prefWidth="600.0" alignment="center" spacing="10">
+
+    <padding>
+        <Insets bottom="25" left="25" right="25" top="25"/>
+    </padding>
+
+    <Label id="text-title">ALL EVENTS LIST</Label>
+    <Button fx:id="BackBtn" onAction="#changeToMainPage" text="Back"/>
+
+    <stylesheets>
+        <URL value="@eventsLists.css"/>
+    </stylesheets>
+</VBox>
