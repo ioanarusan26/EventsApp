@@ -53,9 +53,13 @@ public class UserService
     public static int getUserRole(String username) throws UserDontExistsException {
         for(User user : users)
         {
-            if (searchForUser(username)) {
-                if ((user.getRole()).equals("Participant")) return 10;
-                else if ((user.getRole()).equals("Volunteer")) return 20;
+            if ((user.getUsername()).equals(username)) {
+                if ((user.getRole()).equals("Participant")){
+                    return 1;
+                }
+                else if ((user.getRole()).equals("Volunteer")) {
+                    return 2;
+                }
             }
         }
         return 0;
