@@ -35,15 +35,17 @@ public class LoginController {
         int role = UserService.logInUser(usernameField.getText(), passwordField.getText());
         Stage stage = (Stage)loginBtn1.getScene().getWindow();
         Parent root;
-        if(role==10)
+        if(role==1) //participant
         {
             root = FXMLLoader.load(getClass().getClassLoader().getResource("mainPage1.fxml"));
         }
-        else if(role==20)
+        else if(role==2) //voluntar
         {
             root = FXMLLoader.load(getClass().getClassLoader().getResource("mainPage2.fxml"));
         }
+//        admin
         else root = FXMLLoader.load(getClass().getClassLoader().getResource("mainPage.fxml"));
+//        root = FXMLLoader.load(getClass().getClassLoader().getResource("mainPage.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
