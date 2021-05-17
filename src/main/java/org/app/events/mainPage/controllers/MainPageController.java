@@ -2,6 +2,7 @@ package org.app.events.mainPage.controllers;
 
 
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -18,7 +19,7 @@ public class MainPageController {
 
 
     @FXML
-    private Button LogOutBtn, adminToAllVolunteersBtn, adminToAllEventsBtn, addEventBtn ;
+    private Button LogOutBtn, adminToAllVolunteersBtn, adminToAllEventsBtn, addEventBtn , volunteerToAllEventsBtn;
     @FXML
     public void changeToLanding() throws IOException
     {
@@ -52,6 +53,15 @@ public class MainPageController {
         EventService.loadEventsFromFile();
         Stage stage = (Stage)addEventBtn.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("addEvent/addEvent.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    public void changeToVolunteertoAllEvents() throws IOException {
+        EventService.loadEventsFromFile();
+        Stage stage = (Stage)volunteerToAllEventsBtn.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("eventLists/volunteerToAllEvents.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
