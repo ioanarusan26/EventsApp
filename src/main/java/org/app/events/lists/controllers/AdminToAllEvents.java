@@ -16,9 +16,7 @@ import java.io.IOException;
 public class AdminToAllEvents {
 
     @FXML
-    private Label eventNameLbl,dateLbl;
-    @FXML
-    private Text descriptionTxt;
+    private Label eventNameLbl,dateLbl, descriptionLbl;
     @FXML
     private Button previousBtn, nextBtn;
     @FXML
@@ -29,9 +27,15 @@ public class AdminToAllEvents {
     @FXML
     public void initialize() throws IOException {
         EventService.loadEventsFromFile();
-        eventNameLbl.setText(EventService.events.get(0).getName());
-        dateLbl.setText(EventService.events.get(0).getDate());
-        descriptionTxt.setText(EventService.events.get(0).getDescription());
+        if(EventService.events.size() >= 1) {
+            eventNameLbl.setText(EventService.events.get(0).getName());
+            dateLbl.setText(EventService.events.get(0).getDate());
+            descriptionLbl.setText(EventService.events.get(0).getDescription());
+        }
+        else
+        {
+            descriptionLbl.setText("NO EVENTS");
+        }
     }
 
     @FXML
@@ -41,7 +45,7 @@ public class AdminToAllEvents {
             i++;
             eventNameLbl.setText(EventService.events.get(i).getName());
             dateLbl.setText(EventService.events.get(i).getDate());
-            descriptionTxt.setText(EventService.events.get(i).getDescription());
+            descriptionLbl.setText(EventService.events.get(i).getDescription());
         }
     }
 
@@ -52,7 +56,7 @@ public class AdminToAllEvents {
         EventService.persistEvents();
         eventNameLbl.setText("");
         dateLbl.setText("");
-        descriptionTxt.setText("Event deleted successfully");
+        descriptionLbl.setText("Event deleted successfully");
     }
 
     @FXML
@@ -62,7 +66,7 @@ public class AdminToAllEvents {
             i--;
             eventNameLbl.setText(EventService.events.get(i).getName());
             dateLbl.setText(EventService.events.get(i).getDate());
-            descriptionTxt.setText(EventService.events.get(i).getDescription());
+            descriptionLbl.setText(EventService.events.get(i).getDescription());
         }
     }
 

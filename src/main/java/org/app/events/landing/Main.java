@@ -14,7 +14,6 @@ public class Main extends Application
     public void start(Stage primaryStage) throws Exception
     {
         UserService.loadUsersFromFile();
-
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("./landing/landing.fxml"));
         primaryStage.setTitle("Events App");
         primaryStage.setScene(new Scene(root, 600, 400));
