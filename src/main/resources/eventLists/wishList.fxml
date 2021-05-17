@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import java.net.URL?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.app.events.lists.controllers.WishList"
+            prefHeight="400.0" prefWidth="600.0">
+<padding>
+    <Insets bottom="25" left="25" right="25" top="25"/>
+</padding>
+    <top>
+        <VBox alignment="center">
+            <Label fx:id="eventNameLbl"/>
+        </VBox>
+    </top>
+    <center>
+        <VBox alignment="center">
+            <Label fx:id="dateLbl"/>
+            <Label fx:id="descriptionLbl"/>
+        </VBox>
+    </center>
+    <bottom>
+    <GridPane hgap="10" alignment="center">
+        <Button text="Previous" onAction="#changeToPrevious" fx:id="previousBtn" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <HBox alignment="center" spacing="10" GridPane.rowIndex="0" GridPane.columnIndex="1">
+            <Button fx:id="backBtn" onAction="#changeToMainPage" text="Back"/>
+            <Button fx:id="doneBtn" onAction="#markAsDone" text="Gone" />
+        </HBox>
+        <Button text="Next" onAction="#changeToNext" fx:id="nextBtn" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+
+    </GridPane>
+    </bottom>
+    <stylesheets>
+        <URL value="@eventsLists.css"/>
+    </stylesheets>
+</BorderPane>
