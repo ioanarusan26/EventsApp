@@ -1,0 +1,46 @@
+.root
+{
+    -fx-background-color: eff8e2;
+}
+
+#title-text
+{
+    -fx-font-size: 25px;
+    -fx-text-fill: #18020c;
+    -fx-font-family: SansSerif;
+    -fx-text-alignment: center;
+    -fx-padding: 0 0 10 0;
+}
+
+.label
+{
+    -fx-font-size: 15px;
+    -fx-font-family: sans-serif;
+}
+
+.text-field
+{
+    -fx-border-color: #bbafb9;
+}
+
+.text-field:focused
+{
+    -fx-border-color: #634b66;
+}
+
+#description
+{
+    -fx-min-height: 100;
+    -fx-min-width: 300;
+}
+
+#modifyBtn
+{
+    -fx-background-color: #634b66;
+    -fx-cursor: hand;
+    -fx-background-radius: 5;
+    -fx-text-fill: white;
+    -fx-min-width: 70px;
+    -fx-min-height: 35px;
+    -fx-font-size: 15px;
+}

@@ -36,7 +36,7 @@
             <Button text="Previous" onAction="#changeToPrevious" fx:id="previousBtn" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
             <HBox alignment="center" spacing="10" GridPane.rowIndex="0" GridPane.columnIndex="1">
                 <Button fx:id="backBtn" onAction="#changeToMainPage" text="Back"/>
-                <Button text="Modify"/>
+                <Button fx:id="modifyBtn" text="Modify" onAction="#modifyEvent"/>
                 <Button text="Delete" onAction="#deleteEvent"/>
             </HBox>
             <Button text="Next" onAction="#changeToNext" fx:id="nextBtn" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
