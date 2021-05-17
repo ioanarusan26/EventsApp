@@ -12,7 +12,7 @@ public class Event
     private String date;
     private String description;
     private List<User> participants;
-    private List<User> volunteers;
+    public List<User> volunteers;
 
     public Event(){
     }
