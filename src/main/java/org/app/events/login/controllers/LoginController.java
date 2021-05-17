@@ -12,6 +12,7 @@ import javafx.stage.Stage;
 import org.app.events.login.exceptions.PasswordIsWrongException;
 import org.app.events.login.exceptions.UserDontExistsException;
 import org.app.events.login.services.UserService;
+import org.app.events.registration.model.User;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public class LoginController {
     @FXML
     private Button backBtn, loginBtn1;
 
-
+    public static User  activeUser;
     @FXML
     public void handleLogInAction() throws UserDontExistsException, PasswordIsWrongException, IOException {
 
