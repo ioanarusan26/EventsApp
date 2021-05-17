@@ -88,8 +88,16 @@ public class WishList {
     @FXML
     public void markAsDone() {
         wishList.remove(index);
+
         for(int i=0; i<EventService.events.size(); i++)
         {
+            for(User participant : EventService.events.get(i).participants)
+            {
+                if((participant.getUsername()).equals(LoginController.activeUser.getUsername()))
+                {
+                    PastEvents.pastEventsList.add(EventService.events.get(i));
+                }
+            }
             EventService.events.get(i).participants.removeIf(participant -> (LoginController.activeUser.getUsername()).equals(participant.getUsername()));
         }
         eventNameLbl.setText("");
