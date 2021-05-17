@@ -21,7 +21,7 @@ import java.util.Objects;
 
 public class UserService
 {
-    private static List<org.app.events.registration.model.User> users;
+    public static List<org.app.events.registration.model.User> users;
     private static final Path USERS_PATH = FileSystemService.getPathToFile("config", "users.json");
 
     public static void loadUsersFromFile() throws IOException
