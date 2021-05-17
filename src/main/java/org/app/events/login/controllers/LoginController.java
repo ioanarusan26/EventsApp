@@ -10,6 +10,7 @@ import javafx.scene.control.TextField;
 
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import org.app.events.lists.controllers.WishList;
 import org.app.events.login.exceptions.PasswordIsWrongException;
 import org.app.events.login.exceptions.UserDontExistsException;
 import org.app.events.login.services.UserService;
@@ -36,7 +37,6 @@ public class LoginController {
 
         try {
             UserService.loadUsersFromFile();
-
             int role = UserService.logInUser(usernameField.getText(), passwordField.getText());
             Stage stage = (Stage) loginBtn1.getScene().getWindow();
             Parent root;

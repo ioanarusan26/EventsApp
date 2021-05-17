@@ -11,6 +11,10 @@ import javafx.scene.control.Button;
 
 import javafx.stage.Stage;
 import org.app.events.event.services.EventService;
+import org.app.events.lists.controllers.VolunteerToAllEvents;
+import org.app.events.lists.controllers.WishList;
+import org.app.events.login.controllers.LoginController;
+import org.app.events.registration.model.User;
 
 import java.io.IOException;
 
@@ -19,10 +23,11 @@ public class MainPageController {
 
 
     @FXML
-    private Button LogOutBtn, adminToAllVolunteersBtn, adminToAllEventsBtn, addEventBtn , volunteerToAllEventsBtn, participantToAllEventsBtn;
+    private Button LogOutBtn, adminToAllVolunteersBtn, adminToAllEventsBtn, addEventBtn , volunteerToAllEventsBtn, participantToAllEventsBtn, participantToWishlistBtn;
     @FXML
     public void changeToLanding() throws IOException
     {
+        LoginController.activeUser= new User();
         Stage stage = (Stage)LogOutBtn.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("./landing/landing.fxml"));
         Scene scene = new Scene(root);
@@ -71,6 +76,15 @@ public class MainPageController {
         EventService.loadEventsFromFile();
         Stage stage = (Stage)participantToAllEventsBtn.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("eventLists/participantToAllEvents.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    public void changeWishList() throws IOException {
+        EventService.loadEventsFromFile();
+        Stage stage = (Stage)participantToWishlistBtn.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("eventLists/wishList.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
