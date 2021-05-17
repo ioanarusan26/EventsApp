@@ -11,6 +11,8 @@ import javafx.stage.Stage;
 import org.app.events.event.model.Event;
 import org.app.events.event.services.EventService;
 import org.app.events.login.controllers.LoginController;
+import org.app.events.registration.model.User;
+import org.app.events.volunteer.exceptions.VolunteerAlreadyAppliedException;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -25,11 +27,14 @@ public class VolunteerToAllEvents {
     private Label eventNameLbl,dateLbl, descriptionLbl;
     @FXML
     private Button backBtn ;
+    @FXML
+    private Text applyMessage;
 
     public static int i=0;
 
     @FXML
     public void initialize() throws IOException, ParseException {
+        i=0;
         EventService.loadEventsFromFile();
         if (EventService.events.size() >= 1) {
             eventNameLbl.setText(EventService.events.get(i).getName());
@@ -47,6 +52,7 @@ public class VolunteerToAllEvents {
             eventNameLbl.setText(EventService.events.get(i).getName());
             dateLbl.setText(EventService.events.get(i).getDate());
             descriptionLbl.setText(EventService.events.get(i).getDescription());
+            applyMessage.setText("");
         }
     }
 
@@ -58,14 +64,27 @@ public class VolunteerToAllEvents {
             eventNameLbl.setText(EventService.events.get(i).getName());
             dateLbl.setText(EventService.events.get(i).getDate());
             descriptionLbl.setText(EventService.events.get(i).getDescription());
+            applyMessage.setText("");
         }
     }
 
     @FXML
     public void applyToEvent()
     {
-        EventService.events.get(i).volunteers.add(LoginController.activeUser);
-        EventService.persistEvents();
+        try {
+            for (User user : EventService.events.get(i).volunteers) {
+                if (LoginController.activeUser.getUsername().equals(user.getUsername())) {
+                    throw new VolunteerAlreadyAppliedException();
+                }
+            }
+            EventService.events.get(i).volunteers.add(LoginController.activeUser);
+            EventService.persistEvents();
+            applyMessage.setText("Applied to this event!");
+        }
+        catch(VolunteerAlreadyAppliedException e)
+        {
+            applyMessage.setText(e.getMessage());
+        }
     }
 
     @FXML
