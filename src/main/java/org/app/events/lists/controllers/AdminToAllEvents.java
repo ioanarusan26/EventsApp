@@ -20,17 +20,17 @@ public class AdminToAllEvents {
     @FXML
     private Button previousBtn, nextBtn;
     @FXML
-    private Button backBtn ;
+    private Button backBtn, modifyBtn;
 
-    private static int i=0;
+    public static int i=0;
 
     @FXML
     public void initialize() throws IOException {
         EventService.loadEventsFromFile();
         if(EventService.events.size() >= 1) {
-            eventNameLbl.setText(EventService.events.get(0).getName());
-            dateLbl.setText(EventService.events.get(0).getDate());
-            descriptionLbl.setText(EventService.events.get(0).getDescription());
+            eventNameLbl.setText(EventService.events.get(i).getName());
+            dateLbl.setText(EventService.events.get(i).getDate());
+            descriptionLbl.setText(EventService.events.get(i).getDescription());
         }
         else
         {
@@ -57,6 +57,17 @@ public class AdminToAllEvents {
         eventNameLbl.setText("");
         dateLbl.setText("");
         descriptionLbl.setText("Event deleted successfully");
+    }
+
+    @FXML
+    public void modifyEvent() throws IOException
+    {
+        if(EventService.events.size()>0) {
+            Stage stage = new Stage();
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("./modifyEvent/modifyEvent.fxml"));
+            stage.setScene(new Scene(root, 400, 300));
+            stage.show();
+        }
     }
 
     @FXML
