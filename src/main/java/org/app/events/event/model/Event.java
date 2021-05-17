@@ -11,8 +11,13 @@ public class Event
     private String name;
     private String date;
     private String description;
-    private List<User> participants;
+
+    public List<User> participants;
+   
+
+    
     public List<User> volunteers;
+
 
     public Event(){
     }

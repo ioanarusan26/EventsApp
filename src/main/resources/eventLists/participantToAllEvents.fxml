@@ -8,6 +8,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import java.net.URL?>
+<?import javafx.scene.text.Text?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="org.app.events.lists.controllers.ParticipantToAllEvents"
@@ -30,15 +31,22 @@
     </center>
 
     <bottom>
+<VBox alignment="CENTER">
         <GridPane hgap="10" alignment="center">
+
+
             <Button text="Previous" onAction="#changeToPrevious" fx:id="previousBtn" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+
             <HBox alignment="center" spacing="10" GridPane.rowIndex="0" GridPane.columnIndex="1">
                 <Button fx:id="backBtn" onAction="#changeToMainPage" text="Back"/>
-                <Button text="Reserve a Seat"/>
+
+                <Button text="Book a Seat" fx:id="bookBtn" onAction="#handleBookASeat"/>
 
             </HBox>
             <Button text="Next" onAction="#changeToNext" fx:id="nextBtn" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
         </GridPane>
+    <Text fx:id="bookedMessage"/>
+</VBox>
     </bottom>
 
     <stylesheets>
