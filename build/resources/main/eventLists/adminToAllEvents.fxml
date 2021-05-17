@@ -1,22 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.geometry.Insets?>
 
-<?import java.net.URL?>
-<VBox xmlns="http://javafx.com/javafx"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.app.events.lists.controllers.AdminToAllEvents"
-      prefHeight="400.0" prefWidth="600.0" alignment="center" spacing="10">
+<?import javafx.scene.text.Text?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.app.events.lists.controllers.AdminToAllEvents"
+            prefHeight="400.0" prefWidth="600.0" >
 
-    <padding>
-        <Insets bottom="25" left="25" right="25" top="25"/>
-    </padding>
+    <top>
+        <VBox>
+            <Label fx:id="eventNameLbl" text="event name here"/>
+        </VBox>
+    </top>
 
-    <Label id="text-title">ALL EVENTS LIST</Label>
-    <Button fx:id="BackBtn" onAction="#changeToMainPage" text="Back"/>
+    <left>
+        <Button text="Previous" onAction="#changeToPrevious" fx:id="previousBtn"/>
+    </left>
 
-    <stylesheets>
-        <URL value="@eventsLists.css"/>
-    </stylesheets>
-</VBox>
+    <right>
+        <Button text="Next" onAction="#changeToNext" fx:id="nextBtn"/>
+    </right>
+
+    <center>
+        <VBox alignment="center">
+            <Label fx:id="dateLbl" text="date here"/>
+            <Text fx:id="descriptionTxt" text="description here"/>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="center" spacing="10">
+            <Button fx:id="backBtn" onAction="#changeToMainPage" text="Back"/>
+            <Button text="Modify"/>
+            <Button text="Delete" onAction="#deleteEvent"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

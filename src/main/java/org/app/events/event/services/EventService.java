@@ -17,7 +17,7 @@ import java.util.Objects;
 
 public class EventService
 {
-    private static List<Event> events;
+    public static List<Event> events;
     private static final Path EVENTS_PATH = FileSystemService.getPathToFile("config", "events.json");
 
     public static void loadEventsFromFile() throws IOException
