@@ -19,8 +19,8 @@
     </padding>
 
     <top>
-        <HBox alignment="center">
-            <Label fx:id="volunteerFirstNameLbl"/>
+        <HBox alignment="center" spacing="10" >
+            <Label fx:id="volunteerFirstNameLbl" />
             <Label fx:id="volunteerLastNameLbl" />
         </HBox>
     </top>

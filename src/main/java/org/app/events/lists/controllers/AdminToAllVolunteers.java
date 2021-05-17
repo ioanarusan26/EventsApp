@@ -41,7 +41,6 @@ public class AdminToAllVolunteers {
         if(UserService.users.size() >=1){
             while (!((UserService.users.get(i).getRole()).equals("Volunteer")) && i<=UserService.users.size()) {
                 i++;
-                System.out.println(UserService.users.get(i).getRole());
             }
            if((UserService.users.get(i).getRole()).equals("Volunteer"))
             {
