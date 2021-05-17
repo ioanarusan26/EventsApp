@@ -18,7 +18,7 @@ import java.time.*;
 import java.time.format.*;
 import java.util.Date;
 
-public class VolunteerToAllEvents {
+public class ParticipantToAllEvents {
 
     @FXML
     private Label eventNameLbl,dateLbl, descriptionLbl;
@@ -68,7 +68,7 @@ public class VolunteerToAllEvents {
     public void changeToMainPage() throws IOException
     {
         Stage stage = (Stage)backBtn.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("./mainPage/volunteerDashboard.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("./mainPage/participantDashboard.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
