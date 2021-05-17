@@ -5,6 +5,7 @@ package org.app.events.login.services;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.io.FileUtils;
+import org.app.events.login.controllers.LoginController;
 import org.app.events.login.exceptions.PasswordIsWrongException;
 import org.app.events.login.exceptions.UserDontExistsException;
 import org.app.events.registration.model.User;
@@ -70,6 +71,7 @@ public class UserService
         for (User user : users) {
             if(username.equals(user.getUsername()))
             {
+                LoginController.activeUser=user;
                 return  true;
             }
         }
