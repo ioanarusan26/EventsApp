@@ -38,6 +38,7 @@ public class MainPageController {
     }
     @FXML
     public void changeToAdminToAllEvents() throws IOException {
+        EventService.loadEventsFromFile();
         Stage stage = (Stage)adminToAllEventsBtn.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("eventLists/adminToAllEvents.fxml"));
         Scene scene = new Scene(root);
