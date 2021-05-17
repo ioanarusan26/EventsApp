@@ -68,7 +68,7 @@ public class AdminToAllVolunteers {
                emailLbl.setText(UserService.users.get(i).getEmail());
            }
            else {
-               while (!((UserService.users.get(i).getRole()).equals("Volunteer")) && i<=UserService.users.size()) {
+               while (!((UserService.users.get(i).getRole()).equals("Volunteer")) && i<UserService.users.size()) {
                    i++;
                }
 
