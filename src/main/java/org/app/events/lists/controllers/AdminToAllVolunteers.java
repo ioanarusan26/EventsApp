@@ -30,7 +30,7 @@ public class AdminToAllVolunteers {
     public void changeToMainPage() throws IOException
     {
         Stage stage = (Stage) backBtn.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("./mainPage/mainPage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("./mainPage/adminDashboard.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

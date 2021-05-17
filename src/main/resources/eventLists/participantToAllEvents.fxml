@@ -6,28 +6,26 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<?import javafx.scene.text.Text?>
-<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
+<?import java.net.URL?>
 <BorderPane xmlns="http://javafx.com/javafx"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.app.events.lists.controllers.AdminToAllVolunteers"
-      prefHeight="400.0" prefWidth="600.0"  >
-
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.app.events.lists.controllers.ParticipantToAllEvents"
+            prefHeight="400.0" prefWidth="600.0" >
     <padding>
         <Insets bottom="25" left="25" right="25" top="25"/>
     </padding>
 
     <top>
-        <HBox alignment="center" spacing="10" >
-            <Label fx:id="volunteerFirstNameLbl" />
-            <Label fx:id="volunteerLastNameLbl" />
-        </HBox>
+        <VBox alignment="center">
+            <Label fx:id="eventNameLbl"/>
+        </VBox>
     </top>
 
     <center>
         <VBox alignment="center">
-            <Label fx:id="emailLbl"/>
+            <Label fx:id="dateLbl"/>
+            <Label fx:id="descriptionLbl"/>
         </VBox>
     </center>
 
@@ -36,17 +34,15 @@
             <Button text="Previous" onAction="#changeToPrevious" fx:id="previousBtn" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
             <HBox alignment="center" spacing="10" GridPane.rowIndex="0" GridPane.columnIndex="1">
                 <Button fx:id="backBtn" onAction="#changeToMainPage" text="Back"/>
+                <Button text="Reserve a Seat"/>
 
             </HBox>
             <Button text="Next" onAction="#changeToNext" fx:id="nextBtn" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
         </GridPane>
     </bottom>
 
-
-
-
-
     <stylesheets>
-        <URL value="@volunteerLists.css"/>
+        <URL value="@eventsLists.css"/>
     </stylesheets>
+
 </BorderPane>
