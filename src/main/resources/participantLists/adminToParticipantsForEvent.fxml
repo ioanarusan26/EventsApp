@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import java.net.URL?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.app.events.lists.controllers.AdminToParticipantsForEvent"
+            prefHeight="400.0" prefWidth="600.0">
+    <padding>
+        <Insets bottom="25" left="25" right="25" top="25"/>
+    </padding>
+    <top>
+        <HBox alignment="center" spacing="10">
+            <Label fx:id="participantFirstNameLbl" />
+            <Label fx:id="participantLastNameLbl" />
+        </HBox>
+    </top>
+    <center>
+        <VBox alignment="CENTER">
+            <Label fx:id="emailLbl" />
+        </VBox>
+    </center>
+    <bottom>
+        <GridPane hgap="10" alignment="center">
+            <Button text="Previous" onAction="#changeToPrevious" fx:id="previousBtn" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+
+            <Button text="Next" onAction="#changeToNext" fx:id="nextBtn" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+        </GridPane>
+    </bottom>
+<stylesheets>
+    <URL value="@participantsLists.css"/>
+</stylesheets>
+</BorderPane>
