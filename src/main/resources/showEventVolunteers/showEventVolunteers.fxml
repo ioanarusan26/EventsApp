@@ -28,10 +28,17 @@
     </center>
 
     <bottom>
-        <GridPane hgap="10" alignment="center">
-            <Button text="Previous" id="previousBtn" onAction="#changeToPreviousVolunteer" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
-            <Button text="Next" id="nextBtn" onAction="#changeToNextVolunteer" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
-        </GridPane>
+        <VBox alignment="center" spacing="10">
+            <GridPane hgap="10" alignment="center">
+                <Button text="Previous" id="previousBtn" onAction="#changeToPreviousVolunteer" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <Button text="Move volunteer" id="moveVolunteer" onAction="#moveVolunteer" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+                <Button text="Next" id="nextBtn" onAction="#changeToNextVolunteer" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+            </GridPane>
+            <HBox spacing="5" alignment="center">
+                <Label text="Move volunteer to:"/>
+                <TextField fx:id="moveTo"/>
+            </HBox>
+        </VBox>
     </bottom>
 
     <stylesheets>
