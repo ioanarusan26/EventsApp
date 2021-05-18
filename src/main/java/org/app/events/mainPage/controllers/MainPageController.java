@@ -106,7 +106,7 @@ public class MainPageController {
     @FXML
     public void changeToVolunteerEvents() throws IOException {
         Stage stage = (Stage)volunteerToItsEventsBtn.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("eventLists/pastEvents.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("eventLists/volunteerToItsEvents.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
