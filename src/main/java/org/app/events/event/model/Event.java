@@ -17,6 +17,7 @@ public class Event
 
     
     public List<User> volunteers;
+    public List<User> pendingVolunteers;
 
 
     public Event(){
@@ -29,6 +30,7 @@ public class Event
         this.description = description;
         participants = new ArrayList<User>();
         volunteers = new ArrayList<User>();
+        pendingVolunteers = new ArrayList<User>();
     }
 
     public String getName()

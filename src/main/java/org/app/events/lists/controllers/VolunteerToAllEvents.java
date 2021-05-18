@@ -77,7 +77,12 @@ public class VolunteerToAllEvents {
                     throw new VolunteerAlreadyAppliedException();
                 }
             }
-            EventService.events.get(i).volunteers.add(LoginController.activeUser);
+            for (User user : EventService.events.get(i).pendingVolunteers) {
+                if (LoginController.activeUser.getUsername().equals(user.getUsername())) {
+                    throw new VolunteerAlreadyAppliedException();
+                }
+            }
+            EventService.events.get(i).pendingVolunteers.add(LoginController.activeUser);
             EventService.persistEvents();
             applyMessage.setText("Applied to this event!");
         }
