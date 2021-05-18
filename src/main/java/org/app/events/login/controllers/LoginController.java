@@ -10,6 +10,8 @@ import javafx.scene.control.TextField;
 
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import org.app.events.lists.controllers.VolunteerToAllEvents;
+import org.app.events.lists.controllers.VolunteerToItsEvents;
 import org.app.events.lists.controllers.WishList;
 import org.app.events.login.exceptions.PasswordIsWrongException;
 import org.app.events.login.exceptions.UserDontExistsException;
@@ -45,6 +47,7 @@ public class LoginController {
                 root = FXMLLoader.load(getClass().getClassLoader().getResource("./mainPage/participantDashboard.fxml"));
             } else if (role == 2) //voluntar
             {
+                VolunteerToItsEvents.populateVolunteerEvents(LoginController.activeUser);
                 root = FXMLLoader.load(getClass().getClassLoader().getResource("./mainPage/volunteerDashboard.fxml"));
             }
 //        admin
