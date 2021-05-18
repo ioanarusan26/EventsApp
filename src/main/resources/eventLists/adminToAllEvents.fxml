@@ -38,6 +38,7 @@
                 <Button fx:id="backBtn" onAction="#changeToMainPage" text="Back"/>
                 <Button fx:id="modifyBtn" text="Modify" onAction="#modifyEvent"/>
                 <Button text="Delete" onAction="#deleteEvent"/>
+                <Button text="Applications" onAction="#showPending"/>
             </HBox>
             <Button text="Next" onAction="#changeToNext" fx:id="nextBtn" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
         </GridPane>
