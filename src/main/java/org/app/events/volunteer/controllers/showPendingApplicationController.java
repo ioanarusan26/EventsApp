@@ -51,7 +51,17 @@ public class showPendingApplicationController
         EventService.events.get(AdminToAllEvents.indexATE).volunteers.add(aux);
         EventService.events.get(AdminToAllEvents.indexATE).pendingVolunteers.remove(k);
         EventService.persistEvents();
-        emailLbl.setText("Accepted volunteer!");
+        if(EventService.events.get(AdminToAllEvents.indexATE).pendingVolunteers.size()-1 >= k )
+        {
+            volunteerFirstNameLbl.setText(EventService.events.get(AdminToAllEvents.indexATE).pendingVolunteers.get(k).getFirstname());
+            volunteerLastNameLbl.setText(EventService.events.get(AdminToAllEvents.indexATE).pendingVolunteers.get(k).getLastname());
+            emailLbl.setText(EventService.events.get(AdminToAllEvents.indexATE).pendingVolunteers.get(k).getEmail());
+        }
+        else {
+            volunteerFirstNameLbl.setText("");
+            volunteerLastNameLbl.setText("");
+            emailLbl.setText("No pending applications");
+        }
     }
 
     @FXML
@@ -59,6 +69,17 @@ public class showPendingApplicationController
     {
         EventService.events.get(AdminToAllEvents.indexATE).pendingVolunteers.remove(k);
         EventService.persistEvents();
-        emailLbl.setText("Rejected volunteer!");
+        if(EventService.events.get(AdminToAllEvents.indexATE).pendingVolunteers.size()-1 >= k )
+        {
+            volunteerFirstNameLbl.setText(EventService.events.get(AdminToAllEvents.indexATE).pendingVolunteers.get(k).getFirstname());
+            volunteerLastNameLbl.setText(EventService.events.get(AdminToAllEvents.indexATE).pendingVolunteers.get(k).getLastname());
+            emailLbl.setText(EventService.events.get(AdminToAllEvents.indexATE).pendingVolunteers.get(k).getEmail());
+        }
+        else
+        {
+            volunteerFirstNameLbl.setText("");
+            volunteerLastNameLbl.setText("");
+            emailLbl.setText("No pending applications");
+        }
     }
 }

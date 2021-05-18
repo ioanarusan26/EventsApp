@@ -17,9 +17,7 @@ public class AdminToAllEvents {
     @FXML
     private Label eventNameLbl,dateLbl, descriptionLbl;
     @FXML
-    private Button previousBtn, nextBtn;
-    @FXML
-    private Button backBtn, modifyBtn;
+    private Button backBtn;
 
     public static int indexATE =0;
 
@@ -109,5 +107,15 @@ public class AdminToAllEvents {
             stage.show();
         }
 
+    }
+
+    @FXML
+    public void changeToVolunteersForEvent() throws IOException {
+        if(EventService.events.size()>0) {
+            Stage stage = new Stage();
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("showEventVolunteers/showEventVolunteers.fxml"));
+            stage.setScene(new Scene(root, 400, 300));
+            stage.show();
+        }
     }
 }
