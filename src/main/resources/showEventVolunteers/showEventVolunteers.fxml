@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import java.net.URL?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.app.events.volunteer.controllers.showEventVolunteersController"
+            prefHeight="400.0" prefWidth="600.0"  >
+
+    <padding>
+        <Insets bottom="25" left="25" right="25" top="25"/>
+    </padding>
+
+    <top>
+        <HBox alignment="center" spacing="10" >
+            <Label fx:id="volunteerFirstNameLbl" />
+            <Label fx:id="volunteerLastNameLbl" />
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="center">
+            <Label fx:id="emailLbl"/>
+        </VBox>
+    </center>
+
+    <bottom>
+        <GridPane hgap="10" alignment="center">
+            <Button text="Previous" id="previousBtn" onAction="#changeToPreviousVolunteer" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <Button text="Next" id="nextBtn" onAction="#changeToNextVolunteer" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+        </GridPane>
+    </bottom>
+
+    <stylesheets>
+        <URL value="@showEventVolunteers.css"/>
+    </stylesheets>
+</BorderPane>
