@@ -49,6 +49,15 @@ public class LoginController {
             {
                 VolunteerToItsEvents.populateVolunteerEvents(LoginController.activeUser);
                 root = FXMLLoader.load(getClass().getClassLoader().getResource("./mainPage/volunteerDashboard.fxml"));
+
+                if(VolunteerToItsEvents.volunteerEvents.size()>=1)
+                {
+                    Stage stage1 = new Stage();
+                    Parent root1 = FXMLLoader.load(getClass().getClassLoader().getResource("popupWindow/popupWindow.fxml"));
+                    stage1.setScene(new Scene(root1, 450, 100));
+                    stage1.showAndWait();
+                }
+
             }
 //        admin
             else root = FXMLLoader.load(getClass().getClassLoader().getResource("./mainPage/adminDashboard.fxml"));
