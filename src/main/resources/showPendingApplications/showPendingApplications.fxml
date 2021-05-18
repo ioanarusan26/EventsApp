@@ -39,5 +39,7 @@
         </GridPane>
     </bottom>
 
-
+    <stylesheets>
+        <URL value="@showPendingApplication.css"/>
+    </stylesheets>
 </BorderPane>
