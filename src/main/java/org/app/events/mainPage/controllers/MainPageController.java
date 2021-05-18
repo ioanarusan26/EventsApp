@@ -11,8 +11,7 @@ import javafx.scene.control.Button;
 
 import javafx.stage.Stage;
 import org.app.events.event.services.EventService;
-import org.app.events.lists.controllers.VolunteerToAllEvents;
-import org.app.events.lists.controllers.WishList;
+import org.app.events.lists.controllers.*;
 import org.app.events.login.controllers.LoginController;
 import org.app.events.registration.model.User;
 
@@ -28,6 +27,11 @@ public class MainPageController {
     public void changeToLanding() throws IOException
     {
         LoginController.activeUser= new User();
+        ParticipantToAllEvents.indexPTE=0;
+        AdminToAllEvents.indexATE=0;
+        VolunteerToAllEvents.indexVTE=0;
+        AdminToParticipantsForEvent.indexP=0;
+        AdminToParticipantsForEvent.indexATPE=0;
         Stage stage = (Stage)LogOutBtn.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("./landing/landing.fxml"));
         Scene scene = new Scene(root);

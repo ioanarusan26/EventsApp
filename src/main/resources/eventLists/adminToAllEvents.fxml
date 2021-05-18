@@ -20,6 +20,7 @@
 
     <top>
         <VBox alignment="center">
+            <Button id="participantsBtn" onAction="#changeToParticipantsForEvent" text="See Participants" />
             <Label fx:id="eventNameLbl"/>
         </VBox>
     </top>

@@ -1,14 +1,13 @@
 package org.app.events.lists.controllers;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import org.app.events.event.model.Event;
 import org.app.events.event.services.EventService;
 
 import java.io.IOException;
@@ -22,15 +21,15 @@ public class AdminToAllEvents {
     @FXML
     private Button backBtn, modifyBtn;
 
-    public static int i=0;
+    public static int indexATE =0;
 
     @FXML
     public void initialize() throws IOException {
         EventService.loadEventsFromFile();
         if(EventService.events.size() >= 1) {
-            eventNameLbl.setText(EventService.events.get(i).getName());
-            dateLbl.setText(EventService.events.get(i).getDate());
-            descriptionLbl.setText(EventService.events.get(i).getDescription());
+            eventNameLbl.setText(EventService.events.get(indexATE).getName());
+            dateLbl.setText(EventService.events.get(indexATE).getDate());
+            descriptionLbl.setText(EventService.events.get(indexATE).getDescription());
         }
         else
         {
@@ -41,18 +40,18 @@ public class AdminToAllEvents {
     @FXML
     public void changeToNext()
     {
-        if(i<(EventService.events.size()-1)) {
-            i++;
-            eventNameLbl.setText(EventService.events.get(i).getName());
-            dateLbl.setText(EventService.events.get(i).getDate());
-            descriptionLbl.setText(EventService.events.get(i).getDescription());
+        if(indexATE <(EventService.events.size()-1)) {
+            indexATE++;
+            eventNameLbl.setText(EventService.events.get(indexATE).getName());
+            dateLbl.setText(EventService.events.get(indexATE).getDate());
+            descriptionLbl.setText(EventService.events.get(indexATE).getDescription());
         }
     }
 
     @FXML
     public void deleteEvent()
     {
-        EventService.events.remove(i);
+        EventService.events.remove(indexATE);
         EventService.persistEvents();
         eventNameLbl.setText("");
         dateLbl.setText("");
@@ -73,11 +72,11 @@ public class AdminToAllEvents {
     @FXML
     public void changeToPrevious()
     {
-        if(i>0) {
-            i--;
-            eventNameLbl.setText(EventService.events.get(i).getName());
-            dateLbl.setText(EventService.events.get(i).getDate());
-            descriptionLbl.setText(EventService.events.get(i).getDescription());
+        if(indexATE >0) {
+            indexATE--;
+            eventNameLbl.setText(EventService.events.get(indexATE).getName());
+            dateLbl.setText(EventService.events.get(indexATE).getDate());
+            descriptionLbl.setText(EventService.events.get(indexATE).getDescription());
         }
     }
 
@@ -89,5 +88,15 @@ public class AdminToAllEvents {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+    @FXML
+    public void changeToParticipantsForEvent() throws IOException {
+        if(EventService.events.size()>0) {
+            Stage stage = new Stage();
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("participantLists/adminToParticipantsForEvent.fxml"));
+            stage.setScene(new Scene(root, 400, 300));
+            stage.show();
+        }
+
     }
 }
