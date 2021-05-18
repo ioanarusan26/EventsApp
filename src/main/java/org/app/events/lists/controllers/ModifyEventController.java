@@ -26,7 +26,7 @@ public class ModifyEventController
     {
         if(!(name.getText().equals("")))
         {
-            EventService.events.get(AdminToAllEvents.i).setName(name.getText());
+            EventService.events.get(AdminToAllEvents.indexATE).setName(name.getText());
             EventService.persistEvents();
         }
         String pattern = "d-MMM-yyyy";
@@ -36,12 +36,12 @@ public class ModifyEventController
         LocalDate dp = date.getValue();
         System.out.println(dateFormatter.format(dp));
 
-        EventService.events.get(AdminToAllEvents.i).setDate(dateFormatter.format(dp));
+        EventService.events.get(AdminToAllEvents.indexATE).setDate(dateFormatter.format(dp));
         EventService.persistEvents();
         }
         if(!(description.getText().equals("")))
         {
-            EventService.events.get(AdminToAllEvents.i).setDescription(description.getText());
+            EventService.events.get(AdminToAllEvents.indexATE).setDescription(description.getText());
             EventService.persistEvents();
         }
     }

@@ -8,7 +8,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import org.app.events.event.model.Event;
 import org.app.events.event.services.EventService;
 import org.app.events.login.controllers.LoginController;
 import org.app.events.registration.model.User;
@@ -16,10 +15,6 @@ import org.app.events.volunteer.exceptions.VolunteerAlreadyAppliedException;
 
 import java.io.IOException;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.*;
-import java.time.format.*;
-import java.util.Date;
 
 public class VolunteerToAllEvents {
 
@@ -30,16 +25,16 @@ public class VolunteerToAllEvents {
     @FXML
     private Text applyMessage;
 
-    public static int i=0;
+    public static int indexVTE =0;
 
     @FXML
     public void initialize() throws IOException, ParseException {
-        i=0;
+        indexVTE =0;
         EventService.loadEventsFromFile();
         if (EventService.events.size() >= 1) {
-            eventNameLbl.setText(EventService.events.get(i).getName());
-            dateLbl.setText(EventService.events.get(i).getDate());
-            descriptionLbl.setText(EventService.events.get(i).getDescription());
+            eventNameLbl.setText(EventService.events.get(indexVTE).getName());
+            dateLbl.setText(EventService.events.get(indexVTE).getDate());
+            descriptionLbl.setText(EventService.events.get(indexVTE).getDescription());
         } else {
             descriptionLbl.setText("NO EVENTS");
         }
@@ -47,11 +42,11 @@ public class VolunteerToAllEvents {
     @FXML
     public void changeToNext()  {
 
-        if(i<(EventService.events.size()-1)) {
-            i++;
-            eventNameLbl.setText(EventService.events.get(i).getName());
-            dateLbl.setText(EventService.events.get(i).getDate());
-            descriptionLbl.setText(EventService.events.get(i).getDescription());
+        if(indexVTE <(EventService.events.size()-1)) {
+            indexVTE++;
+            eventNameLbl.setText(EventService.events.get(indexVTE).getName());
+            dateLbl.setText(EventService.events.get(indexVTE).getDate());
+            descriptionLbl.setText(EventService.events.get(indexVTE).getDescription());
             applyMessage.setText("");
         }
     }
@@ -59,11 +54,11 @@ public class VolunteerToAllEvents {
     @FXML
     public void changeToPrevious() throws ParseException {
 
-        if(i>0) {
-            i--;
-            eventNameLbl.setText(EventService.events.get(i).getName());
-            dateLbl.setText(EventService.events.get(i).getDate());
-            descriptionLbl.setText(EventService.events.get(i).getDescription());
+        if(indexVTE >0) {
+            indexVTE--;
+            eventNameLbl.setText(EventService.events.get(indexVTE).getName());
+            dateLbl.setText(EventService.events.get(indexVTE).getDate());
+            descriptionLbl.setText(EventService.events.get(indexVTE).getDescription());
             applyMessage.setText("");
         }
     }
@@ -72,17 +67,17 @@ public class VolunteerToAllEvents {
     public void applyToEvent()
     {
         try {
-            for (User user : EventService.events.get(i).volunteers) {
+            for (User user : EventService.events.get(indexVTE).volunteers) {
                 if (LoginController.activeUser.getUsername().equals(user.getUsername())) {
                     throw new VolunteerAlreadyAppliedException();
                 }
             }
-            for (User user : EventService.events.get(i).pendingVolunteers) {
+            for (User user : EventService.events.get(indexVTE).pendingVolunteers) {
                 if (LoginController.activeUser.getUsername().equals(user.getUsername())) {
                     throw new VolunteerAlreadyAppliedException();
                 }
             }
-            EventService.events.get(i).pendingVolunteers.add(LoginController.activeUser);
+            EventService.events.get(indexVTE).pendingVolunteers.add(LoginController.activeUser);
             EventService.persistEvents();
             applyMessage.setText("Applied to this event!");
         }
