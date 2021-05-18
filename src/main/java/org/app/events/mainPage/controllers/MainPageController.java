@@ -22,7 +22,7 @@ public class MainPageController {
 
 
     @FXML
-    private Button LogOutBtn, adminToAllVolunteersBtn, adminToAllEventsBtn, addEventBtn , volunteerToAllEventsBtn, participantToAllEventsBtn, participantToWishlistBtn, participantToPastEventsBtn;
+    private Button LogOutBtn, adminToAllVolunteersBtn, adminToAllEventsBtn, addEventBtn , volunteerToAllEventsBtn, participantToAllEventsBtn, participantToWishlistBtn, participantToPastEventsBtn, volunteerToItsEventsBtn;
     @FXML
     public void changeToLanding() throws IOException
     {
@@ -102,5 +102,13 @@ public class MainPageController {
         stage.setScene(scene);
         stage.show();
 
+    }
+    @FXML
+    public void changeToVolunteerEvents() throws IOException {
+        Stage stage = (Stage)volunteerToItsEventsBtn.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("eventLists/pastEvents.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 }

@@ -17,19 +17,19 @@ public class showPendingApplicationController
     public void initialize()
     {
         k=0;
-        volunteerFirstNameLbl.setText(EventService.events.get(AdminToAllEvents.i).pendingVolunteers.get(k).getFirstname());
-        volunteerLastNameLbl.setText(EventService.events.get(AdminToAllEvents.i).pendingVolunteers.get(k).getLastname());
-        emailLbl.setText(EventService.events.get(AdminToAllEvents.i).pendingVolunteers.get(k).getEmail());
+        volunteerFirstNameLbl.setText(EventService.events.get(AdminToAllEvents.indexATE).pendingVolunteers.get(k).getFirstname());
+        volunteerLastNameLbl.setText(EventService.events.get(AdminToAllEvents.indexATE).pendingVolunteers.get(k).getLastname());
+        emailLbl.setText(EventService.events.get(AdminToAllEvents.indexATE).pendingVolunteers.get(k).getEmail());
     }
 
     @FXML
     public void changeToNextVolunteer()
     {
-        if(k < (EventService.events.get(AdminToAllEvents.i).pendingVolunteers.size()-1)) {
+        if(k < (EventService.events.get(AdminToAllEvents.indexATE).pendingVolunteers.size()-1)) {
             k++;
-            volunteerFirstNameLbl.setText(EventService.events.get(AdminToAllEvents.i).pendingVolunteers.get(k).getFirstname());
-            volunteerLastNameLbl.setText(EventService.events.get(AdminToAllEvents.i).pendingVolunteers.get(k).getLastname());
-            emailLbl.setText(EventService.events.get(AdminToAllEvents.i).pendingVolunteers.get(k).getEmail());
+            volunteerFirstNameLbl.setText(EventService.events.get(AdminToAllEvents.indexATE).pendingVolunteers.get(k).getFirstname());
+            volunteerLastNameLbl.setText(EventService.events.get(AdminToAllEvents.indexATE).pendingVolunteers.get(k).getLastname());
+            emailLbl.setText(EventService.events.get(AdminToAllEvents.indexATE).pendingVolunteers.get(k).getEmail());
         }
     }
 
@@ -38,18 +38,18 @@ public class showPendingApplicationController
     {
         if(k > 0) {
             k--;
-            volunteerFirstNameLbl.setText(EventService.events.get(AdminToAllEvents.i).pendingVolunteers.get(k).getFirstname());
-            volunteerLastNameLbl.setText(EventService.events.get(AdminToAllEvents.i).pendingVolunteers.get(k).getLastname());
-            emailLbl.setText(EventService.events.get(AdminToAllEvents.i).pendingVolunteers.get(k).getEmail());
+            volunteerFirstNameLbl.setText(EventService.events.get(AdminToAllEvents.indexATE).pendingVolunteers.get(k).getFirstname());
+            volunteerLastNameLbl.setText(EventService.events.get(AdminToAllEvents.indexATE).pendingVolunteers.get(k).getLastname());
+            emailLbl.setText(EventService.events.get(AdminToAllEvents.indexATE).pendingVolunteers.get(k).getEmail());
         }
     }
 
     @FXML
     public void acceptVolunteer()
     {
-        User aux = EventService.events.get(AdminToAllEvents.i).pendingVolunteers.get(k);
-        EventService.events.get(AdminToAllEvents.i).volunteers.add(aux);
-        EventService.events.get(AdminToAllEvents.i).pendingVolunteers.remove(k);
+        User aux = EventService.events.get(AdminToAllEvents.indexATE).pendingVolunteers.get(k);
+        EventService.events.get(AdminToAllEvents.indexATE).volunteers.add(aux);
+        EventService.events.get(AdminToAllEvents.indexATE).pendingVolunteers.remove(k);
         EventService.persistEvents();
         emailLbl.setText("Accepted volunteer!");
     }
@@ -57,7 +57,7 @@ public class showPendingApplicationController
     @FXML
     public void rejectVolunteer()
     {
-        EventService.events.get(AdminToAllEvents.i).pendingVolunteers.remove(k);
+        EventService.events.get(AdminToAllEvents.indexATE).pendingVolunteers.remove(k);
         EventService.persistEvents();
         emailLbl.setText("Rejected volunteer!");
     }
