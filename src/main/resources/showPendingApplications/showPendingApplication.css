@@ -1,0 +1,43 @@
+.root
+{
+    -fx-background-color: #eff8e2;
+}
+
+#volunteerFirstNameLbl
+{
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+}
+
+#volunteerLastNameLbl
+{
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+}
+
+#emailLbl
+{
+    -fx-font-size: 20px;
+    -fx-font-style: italic;
+}
+
+#acceptBtn
+{
+    -fx-background-color: #599B67;
+}
+
+#rejectBtn
+{
+    -fx-background-color: #DC232C;
+}
+.button
+{
+    -fx-background-color: #9590a8;
+    -fx-cursor: hand;
+    -fx-background-radius: 5;
+    -fx-text-fill: white;
+    -fx-min-width: 65px;
+    -fx-min-height: 30px;
+    -fx-font-size: 15px;
+    -fx-start-margin: 10 10 10 10;
+}

@@ -71,6 +71,17 @@ public class AdminToAllEvents {
     }
 
     @FXML
+    public void showPending() throws IOException {
+        if(EventService.events.get(i).pendingVolunteers.size() > 0)
+        {
+            Stage stage = new Stage();
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("./showPendingApplications/showPendingApplications.fxml"));
+            stage.setScene(new Scene(root, 400, 300));
+            stage.show();
+        }
+    }
+
+    @FXML
     public void changeToPrevious()
     {
         if(i>0) {
