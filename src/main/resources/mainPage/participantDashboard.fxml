@@ -16,7 +16,7 @@
     <Label>PARTICIPANT DASHBOARD</Label>
     <Button fx:id="participantToAllEventsBtn" onAction="#changeToParticipantToAllEvents" text="All Events"/>
     <Button fx:id="participantToWishlistBtn"  text="WishList Events" onAction="#changeWishList"/>
-    <Button id="participantToPastEventsBtn"  text="Past Events"/>
+    <Button fx:id="participantToPastEventsBtn"  text="Past Events" onAction="#changeToPastEvents"/>
 
     <Button fx:id="LogOutBtn" onAction="#changeToLanding" text="Log Out"/>
     <stylesheets>
