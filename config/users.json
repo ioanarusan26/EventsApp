@@ -6,17 +6,45 @@
   "password" : "ǭD˭v*]��R��T����*8\u0001_#���\u000B�\u001D�rcM��\u001C�N�5�j�����\u001F�Q\u0013��S�Ɲ�ސw�",
   "role" : "admin"
 }, {
-  "username" : "participant",
-  "firstname" : "",
-  "lastname" : "",
-  "email" : "",
-  "password" : "\r�&�\u0005�\u001D��M�lc��v-�i/�M\u000E�\u0004�n�-\rB3�\\���F�VG\f�?%��T��R;��:;F13\\�U",
+  "username" : "ion.popescu",
+  "firstname" : "Ion",
+  "lastname" : "Popescu",
+  "email" : "ion.popescu@mail.com",
+  "password" : "F�+���8z�\u0001�\u0007]g�A�������Nz��J7�$\u0000b���\u0015:�B�b�\u0018\u000E��\u001D�I���\u0012D���\u0011X�",
   "role" : "Participant"
 }, {
-  "username" : "voluntar",
-  "firstname" : "",
-  "lastname" : "",
-  "email" : "",
-  "password" : "��D��� ҈jz��p\u0007��ߴj�w�T\u0012��\u0007�z�\u0018?\u0019k,�HT�I��\u0000��ʰ�V4]�b]���IX��",
+  "username" : "diana.miscuta",
+  "firstname" : "Diana",
+  "lastname" : "Miscuta",
+  "email" : "diana.miscuta@mail.com",
+  "password" : "A��\nI�����O5\u0010H�̕�/\u0014���M\b\u0001͉\u0014��E/�\u001F�����k#�à�\u0019:N������\u0017��5>��",
   "role" : "Volunteer"
+}, {
+  "username" : "madalina.rusan",
+  "firstname" : "Madalina",
+  "lastname" : "Rusan",
+  "email" : "madlrs@mail.com",
+  "password" : "�:\u000EJ?\u0015p��bC�\u000E�\u0003��1}�\r�MqI���_2��\u001FE1_.�/�)\u0012\u0010�����L��p��ke�\\\tE�",
+  "role" : "Volunteer"
+}, {
+  "username" : "catalin.morosanu",
+  "firstname" : "Catalin",
+  "lastname" : "Morosanu",
+  "email" : "cata.morosanu@mail.com",
+  "password" : "/T��o���$�P\u0012�ĸ��LM1U5�\u000E�~��c�f\u001A\u0000��O���<\u0011܍\u001C�O\u0014��vP(s\u001E�[�� \u0018\u0015",
+  "role" : "Participant"
+}, {
+  "username" : "adam.levine",
+  "firstname" : "Adam",
+  "lastname" : "Levine",
+  "email" : "adam.levine@mail.com",
+  "password" : "�\u000Fd\u0017O�\u0015\u0001��?�\f\u001FQ�\u001A`��7�]�<�֮�T�\u0011��VMA�Ϩ�\u0005�����\u0011�\\\u0016\u0016���\u0007畋?Or��",
+  "role" : "Volunteer"
+}, {
+  "username" : "ana.maria",
+  "firstname" : "Ana",
+  "lastname" : "Maria",
+  "email" : "ana.maria@mail.com",
+  "password" : "\u0004e�%��P�4CZ���\u001F�O�f���1#�Յxw�f؁ɾ�_ڶ�'}O�l\u001C��Ժ�6\u000Eg��}�I�E�}",
+  "role" : "Participant"
 } ]

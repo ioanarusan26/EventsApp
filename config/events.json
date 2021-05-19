@@ -1,0 +1,22 @@
+[ {
+  "name" : "Concert caritabil",
+  "date" : "25-Jun-2021",
+  "description" : "Concert de strangere de fonduri pentru spitale.\nArtisti prezenti: Jador, Florin Salam, Babi Minune.",
+  "participants" : [ ],
+  "volunteers" : [ ],
+  "pendingVolunteers" : [ ]
+}, {
+  "name" : "Maratonul lenesilor",
+  "date" : "17-May-2021",
+  "description" : "Acest eveniment este dedicat persoanelor lenese care lasa \nassignmenturile pe ultima suta de metrii. (adica noi, oops)\nP.S. Chiar am facut maraton de codat luni 17 mai XD",
+  "participants" : [ ],
+  "volunteers" : [ ],
+  "pendingVolunteers" : [ ]
+}, {
+  "name" : "Balciul proiectelor",
+  "date" : "19-May-2021",
+  "description" : "Practic ce facem noi astazi, suntem aici ca la balci.\nLipsesc micii si berea!!",
+  "participants" : [ ],
+  "volunteers" : [ ],
+  "pendingVolunteers" : [ ]
+} ]
